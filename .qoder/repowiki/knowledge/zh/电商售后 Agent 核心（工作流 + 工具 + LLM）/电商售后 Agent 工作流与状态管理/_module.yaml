@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: agent_core/agent_graph_state
+title: 电商售后 Agent 工作流与状态管理
+scope:
+    - agent/
+source_files: []
+depends_on: []
+related_to: []

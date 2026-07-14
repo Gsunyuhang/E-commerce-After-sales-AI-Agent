@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: agent_core
+title: 电商售后 Agent 核心（工作流 + 工具 + LLM）
+scope:
+    - agent/
+    - tools/
+    - llm/
+source_files: []
+depends_on: []
+related_to: []

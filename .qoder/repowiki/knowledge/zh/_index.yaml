@@ -1,0 +1,94 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+nodes_managed: true
+exported_at: "2026-07-12T09:22:14Z"
+modules:
+    agent_core:
+        dir_name: 电商售后 Agent 核心（工作流 + 工具 + LLM）
+        title: 电商售后 Agent 核心（工作流 + 工具 + LLM）
+        scope:
+            - agent/
+            - tools/
+            - llm/
+        source_files: []
+        children:
+            - agent_core/agent_graph_state
+            - agent_core/tool_implementations
+        depends_on: []
+        related_to: []
+    agent_core/agent_graph_state:
+        dir_name: 电商售后 Agent 工作流与状态管理
+        title: 电商售后 Agent 工作流与状态管理
+        scope:
+            - agent/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    agent_core/tool_implementations:
+        dir_name: 电商售后工具集（订单_物流_退款_工单）
+        title: 电商售后工具集（订单/物流/退款/工单）
+        scope:
+            - tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    api_server:
+        dir_name: FastAPI 对外 HTTP 服务层
+        title: FastAPI 对外 HTTP 服务层
+        scope:
+            - api/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    config_and_utils:
+        dir_name: 配置与通用工具（Settings、Prompt 模板、异常体系、日志）
+        title: 配置与通用工具（Settings、Prompt 模板、异常体系、日志）
+        scope:
+            - config/
+            - utils/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    database_layer:
+        dir_name: 数据库持久化层（SQLAlchemy ORM）
+        title: 数据库持久化层（SQLAlchemy ORM）
+        scope:
+            - database/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    evaluation:
+        dir_name: 电商售后 Agent 评估套件
+        title: 电商售后 Agent 评估套件
+        scope:
+            - evaluation/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    knowledge_retrieval:
+        dir_name: 知识库检索与向量存储
+        title: 知识库检索与向量存储
+        scope:
+            - knowledge/
+            - data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tests:
+        dir_name: 电商 Agent 单元测试套件
+        title: 电商 Agent 单元测试套件
+        scope:
+            - tests/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

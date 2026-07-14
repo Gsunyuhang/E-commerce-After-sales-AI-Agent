@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: evaluation
+title: 电商售后 Agent 评估套件
+scope:
+    - evaluation/
+source_files: []
+depends_on: []
+related_to: []

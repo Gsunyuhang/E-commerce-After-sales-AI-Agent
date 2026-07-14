@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: config_and_utils
+title: 配置与通用工具（Settings、Prompt 模板、异常体系、日志）
+scope:
+    - config/
+    - utils/
+source_files: []
+depends_on: []
+related_to: []

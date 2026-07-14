@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: agent_core/tool_implementations
+title: 电商售后工具集（订单/物流/退款/工单）
+scope:
+    - tools/
+source_files: []
+depends_on: []
+related_to: []

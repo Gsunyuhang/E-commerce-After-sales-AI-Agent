@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: database_layer
+title: 数据库持久化层（SQLAlchemy ORM）
+scope:
+    - database/
+source_files: []
+depends_on: []
+related_to: []

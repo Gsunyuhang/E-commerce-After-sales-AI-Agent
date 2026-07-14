@@ -1,0 +1,722 @@
+[
+  {
+    "id": "SQ001",
+    "category": "simple_qa",
+    "input": "7天无理由退货怎么操作？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "基础退货政策咨询"
+  },
+  {
+    "id": "SQ002",
+    "category": "simple_qa",
+    "input": "退货运费由谁承担？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "运费承担规则咨询"
+  },
+  {
+    "id": "SQ003",
+    "category": "simple_qa",
+    "input": "质保期是多久？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "质保期限咨询"
+  },
+  {
+    "id": "SQ004",
+    "category": "simple_qa",
+    "input": "运费险能赔多少钱？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "运费险理赔金额"
+  },
+  {
+    "id": "SQ005",
+    "category": "simple_qa",
+    "input": "哪些商品不能退货？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "不可退货商品类目"
+  },
+  {
+    "id": "SQ006",
+    "category": "simple_qa",
+    "input": "换货的流程是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "换货流程咨询"
+  },
+  {
+    "id": "SQ007",
+    "category": "simple_qa",
+    "input": "质量问题退货运费谁出？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "质量问题运费承担"
+  },
+  {
+    "id": "SQ008",
+    "category": "simple_qa",
+    "input": "发货后多久能到？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "发货时效咨询"
+  },
+  {
+    "id": "SQ009",
+    "category": "simple_qa",
+    "input": "运费险理赔多久能到账？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "运费险理赔时效"
+  },
+  {
+    "id": "SQ010",
+    "category": "simple_qa",
+    "input": "超过7天还能退货吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "超期退货政策"
+  },
+  {
+    "id": "SQ011",
+    "category": "simple_qa",
+    "input": "商品签收时发现损坏怎么办？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "签收损坏处理"
+  },
+  {
+    "id": "SQ012",
+    "category": "simple_qa",
+    "input": "质保不包括哪些情况？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "非质保情况咨询"
+  },
+  {
+    "id": "SQ013",
+    "category": "simple_qa",
+    "input": "运费险是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "运费险概念解释"
+  },
+  {
+    "id": "SQ014",
+    "category": "simple_qa",
+    "input": "退款多久能退回？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "退款到账时间"
+  },
+  {
+    "id": "SQ015",
+    "category": "simple_qa",
+    "input": "物流显示签收但没收到怎么办？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "物流异常处理"
+  },
+  {
+    "id": "SQ016",
+    "category": "simple_qa",
+    "input": "换货需要多长时间？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "换货处理周期"
+  },
+  {
+    "id": "MT001",
+    "category": "multi_turn",
+    "input": "我想退货，订单号DD20250701001",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "完整退货流程-有订单号"
+  },
+  {
+    "id": "MT002",
+    "category": "multi_turn",
+    "input": "帮我查一下订单DD20250702002的物流",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["logistics_query"],
+    "notes": "物流查询-有订单号"
+  },
+  {
+    "id": "MT003",
+    "category": "multi_turn",
+    "input": "订单DD20250704004我要换货，鞋子尺码大了",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create"],
+    "notes": "换货流程-有订单号和原因"
+  },
+  {
+    "id": "MT004",
+    "category": "multi_turn",
+    "input": "查询订单DD20250703003的状态",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query"],
+    "notes": "订单状态查询"
+  },
+  {
+    "id": "MT005",
+    "category": "multi_turn",
+    "input": "DD20250701001这个订单的商品坏了，要退货",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "质量问题退货"
+  },
+  {
+    "id": "MT006",
+    "category": "multi_turn",
+    "input": "帮我查下DD20250706006到哪了",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["logistics_query"],
+    "notes": "口语化物流查询"
+  },
+  {
+    "id": "MT007",
+    "category": "multi_turn",
+    "input": "订单DD20250708008申请退款",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "退款申请"
+  },
+  {
+    "id": "MT008",
+    "category": "multi_turn",
+    "input": "DD20250711011的商品不喜欢，想退货",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "无理由退货"
+  },
+  {
+    "id": "MT009",
+    "category": "multi_turn",
+    "input": "查物流 DD20250709009",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["logistics_query"],
+    "notes": "简洁物流查询"
+  },
+  {
+    "id": "MT010",
+    "category": "multi_turn",
+    "input": "DD20250720020的充电宝想退款",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "电子产品退款"
+  },
+  {
+    "id": "MT011",
+    "category": "multi_turn",
+    "input": "帮我看看DD20250712012物流信息",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["logistics_query"],
+    "notes": "物流信息查询"
+  },
+  {
+    "id": "MT012",
+    "category": "multi_turn",
+    "input": "DD20250717017的连衣裙要换货，要M码换成S码",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create"],
+    "notes": "服装换货-尺码问题"
+  },
+  {
+    "id": "MT013",
+    "category": "multi_turn",
+    "input": "订单DD20250714014查询下",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query"],
+    "notes": "简洁订单查询"
+  },
+  {
+    "id": "MT014",
+    "category": "multi_turn",
+    "input": "DD20250701001退货，不想要了",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create", "refund_calc"],
+    "notes": "无理由退货-简洁表达"
+  },
+  {
+    "id": "MT015",
+    "category": "multi_turn",
+    "input": "帮我查DD20250702002的快递到哪了",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["logistics_query"],
+    "notes": "快递查询"
+  },
+  {
+    "id": "MT016",
+    "category": "multi_turn",
+    "input": "DD20250719019的水杯有裂纹，申请换货",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["order_query", "ticket_create"],
+    "notes": "质量问题换货"
+  },
+  {
+    "id": "AM001",
+    "category": "ambiguous",
+    "input": "我想退了",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "缺订单号-应追问"
+  },
+  {
+    "id": "AM002",
+    "category": "ambiguous",
+    "input": "东西坏了怎么办",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "口语化-缺信息"
+  },
+  {
+    "id": "AM003",
+    "category": "ambiguous",
+    "input": "我的快递呢",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "模糊物流查询-缺订单号"
+  },
+  {
+    "id": "AM004",
+    "category": "ambiguous",
+    "input": "能换个颜色吗",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "换货-缺订单号"
+  },
+  {
+    "id": "AM005",
+    "category": "ambiguous",
+    "input": "我不想要了能退吗",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "退货资格咨询"
+  },
+  {
+    "id": "AM006",
+    "category": "ambiguous",
+    "input": "穿了一次能退吗",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "使用后退货-需Query Rewrite"
+  },
+  {
+    "id": "AM007",
+    "category": "ambiguous",
+    "input": "运费谁出啊",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "口语化运费咨询"
+  },
+  {
+    "id": "AM008",
+    "category": "ambiguous",
+    "input": "我的订单怎么了",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "模糊订单查询-缺订单号"
+  },
+  {
+    "id": "AM009",
+    "category": "ambiguous",
+    "input": "退款能退多少",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "退款金额咨询-缺订单号"
+  },
+  {
+    "id": "AM010",
+    "category": "ambiguous",
+    "input": "帮我看看我的那个单子",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "极模糊-缺订单号"
+  },
+  {
+    "id": "AM011",
+    "category": "ambiguous",
+    "input": "用了几天坏了能换吗",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "使用后换货-需Query Rewrite"
+  },
+  {
+    "id": "AM012",
+    "category": "ambiguous",
+    "input": "什么时候能收到",
+    "expected_intent": "order_query",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "模糊物流时效-缺订单号"
+  },
+  {
+    "id": "AM013",
+    "category": "ambiguous",
+    "input": "能不能便宜点退",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "口语化退款咨询"
+  },
+  {
+    "id": "AM014",
+    "category": "ambiguous",
+    "input": "那个东西有保修吗",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "模糊质保咨询"
+  },
+  {
+    "id": "AM015",
+    "category": "ambiguous",
+    "input": "退换货要付钱吗",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "resolved",
+    "expected_actions": ["retrieval"],
+    "notes": "口语化运费咨询"
+  },
+  {
+    "id": "AM016",
+    "category": "ambiguous",
+    "input": "买错了怎么办",
+    "expected_intent": "return_process",
+    "expected_outcome": "resolved",
+    "expected_actions": ["ask_order_id"],
+    "notes": "口语化退换货-缺信息"
+  },
+  {
+    "id": "KM001",
+    "category": "knowledge_missing",
+    "input": "海外购商品的退货政策是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "海外购政策-知识库未覆盖"
+  },
+  {
+    "id": "KM002",
+    "category": "knowledge_missing",
+    "input": "双11预售定金能退吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "预售定金-知识库未覆盖"
+  },
+  {
+    "id": "KM003",
+    "category": "knowledge_missing",
+    "input": "企业采购订单的售后流程是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "企业采购-知识库未覆盖"
+  },
+  {
+    "id": "KM004",
+    "category": "knowledge_missing",
+    "input": "跨境电商的关税退还有什么政策？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "跨境电商关税-知识库未覆盖"
+  },
+  {
+    "id": "KM005",
+    "category": "knowledge_missing",
+    "input": "会员积分退货后会扣吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "会员积分-知识库未覆盖"
+  },
+  {
+    "id": "KM006",
+    "category": "knowledge_missing",
+    "input": "分期付款的订单退款怎么处理？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "分期付款退款-知识库未覆盖"
+  },
+  {
+    "id": "KM007",
+    "category": "knowledge_missing",
+    "input": "以旧换新活动的旧物估价规则是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "以旧换新-知识库未覆盖"
+  },
+  {
+    "id": "KM008",
+    "category": "knowledge_missing",
+    "input": "门店自提的订单怎么退货？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "门店自提退货-知识库未覆盖"
+  },
+  {
+    "id": "KM009",
+    "category": "knowledge_missing",
+    "input": "礼品卡支付的订单退款退到哪里？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "礼品卡退款-知识库未覆盖"
+  },
+  {
+    "id": "KM010",
+    "category": "knowledge_missing",
+    "input": "企业团购有特殊售后政策吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "企业团购-知识库未覆盖"
+  },
+  {
+    "id": "KM011",
+    "category": "knowledge_missing",
+    "input": "商品涨价了退货后重新购买有差价补偿吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "差价补偿-知识库未覆盖"
+  },
+  {
+    "id": "KM012",
+    "category": "knowledge_missing",
+    "input": "虚拟商品充值错误能退吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "虚拟商品退款-知识库部分覆盖"
+  },
+  {
+    "id": "KM013",
+    "category": "knowledge_missing",
+    "input": "安装服务费在退货时退吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "安装服务费-知识库未覆盖"
+  },
+  {
+    "id": "KM014",
+    "category": "knowledge_missing",
+    "input": "拼团订单有一人退货怎么办？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "拼团退货-知识库未覆盖"
+  },
+  {
+    "id": "KM015",
+    "category": "knowledge_missing",
+    "input": "会员等级不同退货政策有区别吗？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "会员等级售后-知识库未覆盖"
+  },
+  {
+    "id": "KM016",
+    "category": "knowledge_missing",
+    "input": "商品被召回的退款流程是什么？",
+    "expected_intent": "policy_qa",
+    "expected_outcome": "refused",
+    "expected_actions": ["retrieval", "handoff"],
+    "notes": "商品召回-知识库未覆盖"
+  },
+  {
+    "id": "OS001",
+    "category": "out_of_scope",
+    "input": "这个商品多少钱？",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "售前价格咨询"
+  },
+  {
+    "id": "OS002",
+    "category": "out_of_scope",
+    "input": "你们有什么新品推荐？",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "商品推荐"
+  },
+  {
+    "id": "OS003",
+    "category": "out_of_scope",
+    "input": "你们的东西太差了！我要投诉！",
+    "expected_intent": "complaint",
+    "expected_outcome": "handoff",
+    "expected_actions": ["emotion_comfort", "handoff"],
+    "notes": "投诉-应转人工"
+  },
+  {
+    "id": "OS004",
+    "category": "out_of_scope",
+    "input": "今天天气怎么样",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "闲聊"
+  },
+  {
+    "id": "OS005",
+    "category": "out_of_scope",
+    "input": "能帮我推荐一款手机吗",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "商品推荐"
+  },
+  {
+    "id": "OS006",
+    "category": "out_of_scope",
+    "input": "我要索赔！你们耽误了我的事",
+    "expected_intent": "complaint",
+    "expected_outcome": "handoff",
+    "expected_actions": ["emotion_comfort", "handoff"],
+    "notes": "索赔-应转人工"
+  },
+  {
+    "id": "OS007",
+    "category": "out_of_scope",
+    "input": "帮我下个单",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "下单请求"
+  },
+  {
+    "id": "OS008",
+    "category": "out_of_scope",
+    "input": "你们客服电话是多少",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "联系方式咨询"
+  },
+  {
+    "id": "OS009",
+    "category": "out_of_scope",
+    "input": "我要找你们经理",
+    "expected_intent": "complaint",
+    "expected_outcome": "handoff",
+    "expected_actions": ["emotion_comfort", "handoff"],
+    "notes": "要求升级-应转人工"
+  },
+  {
+    "id": "OS010",
+    "category": "out_of_scope",
+    "input": "有没有优惠券可以领",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "优惠活动咨询"
+  },
+  {
+    "id": "OS011",
+    "category": "out_of_scope",
+    "input": "你们店在哪里",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "店铺信息咨询"
+  },
+  {
+    "id": "OS012",
+    "category": "out_of_scope",
+    "input": "能开发票吗",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "发票咨询-非售后范围"
+  },
+  {
+    "id": "OS013",
+    "category": "out_of_scope",
+    "input": "你们的营业时间是什么时候",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "营业时间咨询"
+  },
+  {
+    "id": "OS014",
+    "category": "out_of_scope",
+    "input": "我要取消订单但是不是售后的那种取消",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "非售后取消订单"
+  },
+  {
+    "id": "OS015",
+    "category": "out_of_scope",
+    "input": "你们平台和竞品比有什么优势",
+    "expected_intent": "out_of_scope",
+    "expected_outcome": "refused",
+    "expected_actions": ["out_of_scope"],
+    "notes": "平台对比咨询"
+  },
+  {
+    "id": "OS016",
+    "category": "out_of_scope",
+    "input": "太生气了什么垃圾服务",
+    "expected_intent": "complaint",
+    "expected_outcome": "handoff",
+    "expected_actions": ["emotion_comfort", "handoff"],
+    "notes": "情绪发泄-应转人工"
+  }
+]
